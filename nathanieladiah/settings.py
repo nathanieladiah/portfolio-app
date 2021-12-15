@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'crispy_forms',
     'django_filters',
+    'ckeditor',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -136,3 +137,11 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_ACCOUNT')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+    },
+}
