@@ -367,6 +367,13 @@ h6{ font-size: 16px;}
 	color: #fff;
 	background-color: var(--buttonColor);
 	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#submit-btn:hover {
+	background-color: var(--secondaryText);
+	color: var(--secondaryColor)
 }
 
 
