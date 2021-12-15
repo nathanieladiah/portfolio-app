@@ -1,7 +1,18 @@
 {% extends 'base/main.html' %}
-
+{% load static %}
 {% block content %}
 
-<h1>Post Title</h1>
+<div class="main-container">
+	<h1>Post Title</h1>
+
+	<img src="{% static 'base/images/profile.jpg' %}">
+
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat a, fuga ad tempora quis labore consequatur minima 
+		fugit pariatur assumenda, libero quidem cupiditate accusantium necessitatibus eaque animi exercitationem quae 
+		magni. Laboriosam voluptates eaque doloremque libero, voluptatem corrupti, architecto facere ex, fuga odit 
+		accusantium in ipsam quae alias suscipit impedit debitis!
+	</p>
+</div>
 
 {% endblock content %}
