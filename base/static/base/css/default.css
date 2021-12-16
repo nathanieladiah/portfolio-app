@@ -13,6 +13,8 @@
 	--previewShadow: #f0ead6;
 
 	--buttonColor: black;
+
+	--highlighterColor: #ffc701;
 }
 
 html, body {
@@ -201,6 +203,12 @@ h6{ font-size: 16px;}
 	background-color: #7e4c74;
 }
 
+#settings-note {
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+}
+
 .right-column {
 	grid-area: right-column;
 	display: grid;
@@ -323,10 +331,81 @@ h6{ font-size: 16px;}
 	font-size: 12px;
 }
 
-#settings-note {
-	font-size: 12px;
-	font-style: italic;
-	text-align: center;
+
+
+#id_tags {
+	overflow-y: scroll;
+	max-height: 100px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+/* Post page styling */
+
+img{
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.featured_image{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.post-container{
+		width: 900px;
+		margin: 0 auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+}
+
+.comments-wrapper{
+	margin-top: 50px;
+	padding: 10px;
+	border:1px solid var(--borderColor);
+	-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+.comment{
+	display: flex;
+	padding: 15px;
+}
+
+.comment-author{
+	font-size: 14px;
+	font-weight: 700;
+	color: rgb(30, 174, 219) !important;
+	margin: 2px;
+}
+
+.author-pic{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.comment-body{
+
+	font-size: 14px;
+}
+
+@media screen and (max-width: 900px){
+	.post-container{
+		width: 95%;
+	}
+}
+
+.marker {
+	background-color: var(--highlighterColor);
+	padding: 0.25rem;
+}
+
+.post-page ul {
+	list-style-type: disc;
 }
 
 #contact-form {
@@ -399,8 +478,43 @@ h6{ font-size: 16px;}
 	}
 }
 
-/* Form page */
+/* Post Form Page */
 
 .django-ckeditor-widget {
 	width: 100%;
+}
+
+#div_id_tags > div {
+	max-height: 100px;
+	overflow-y: scroll;
+	border: 1px solid #888;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/* Email sent page */
+
+html, body {
+	height: 100%;
+}
+#page-wrapper {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #eaeaea;
+}
+
+#success-box {
+	max-width: 800px;
+	height: auto;
+	background-color: #fff;
+	border: 1px solid #888;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+#success-box  p {
+	font-size: 18px;
 }
