@@ -14,20 +14,20 @@ from .filters import PostFilter
 # Create your views here.
 
 def home(request):
-	posts = Post.objects.filter(active=True, featured=True)[0:3]
+	posts = Post.objects.filter(active=True, featured=True).order_by('-created')[0:3]
 
 	context = {'posts': posts}
 	return render(request, 'base/index.html', context)
 
 def posts(request):
 	# posts = Post.objects.all()
-	posts = Post.objects.filter(active=True)
+	posts = Post.objects.filter(active=True).order_by('-created')
 	myFilter = PostFilter(request.GET, queryset=posts)
 	posts = myFilter.qs
 
 	page = request.GET.get('page')
 
-	paginator = Paginator(posts, 2)
+	paginator = Paginator(posts, 6)
 
 	try:
 		posts = paginator.page(page)
