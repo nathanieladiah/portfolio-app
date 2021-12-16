@@ -503,13 +503,13 @@ html, body {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	background-color: #eaeaea;
+	background-color: var(--secondaryColor);
 }
 
 #success-box {
 	max-width: 800px;
 	height: auto;
-	background-color: #fff;
+	background-color: var(--mainColor);
 	border: 1px solid #888;
 	border-radius: 5px;
 	padding: 15px;
@@ -517,4 +517,10 @@ html, body {
 
 #success-box  p {
 	font-size: 18px;
+}
+
+/* Delete page */
+
+.delete-page {
+	height: 100vh;
 }

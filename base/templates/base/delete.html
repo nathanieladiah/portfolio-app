@@ -3,12 +3,14 @@
 
 {% block content %}
 
-<div class="main-container">
-	<form method="post" action="">
-		{% csrf_token %}
-		<p>Are you sure you want to delete {{item}}</p>
-		<input class="btn btn-danger" type="submit" value="Confirm">
-	</form>
-</div>
+<section class="s2 delete-page">
+	<div class="main-container">
+		<form method="post" action="">
+			{% csrf_token %}
+			<p>Are you sure you want to delete {{item}}</p>
+			<input class="btn btn-danger" type="submit" value="Confirm">
+		</form>
+	</div>
+</section>
 
 {% endblock content %}
