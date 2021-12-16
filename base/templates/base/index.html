@@ -110,7 +110,7 @@
 				{% for post in posts %}
 				<div>
 					<div class="post">
-						<img class="thumbnail" src="{% static 'base/images/karina.png' %}">
+						<img class="thumbnail" src="{{post.thumbnail}}">
 						<div class="post-preview">
 							<h6 class="post-title">{{ post.headline }}</h6>
 							<p class="post-intro">{{ post.sub_headline }}</p>

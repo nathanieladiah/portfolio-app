@@ -12,7 +12,7 @@ class Tag(models.Model):
 class Post(models.Model):
 	headline = models.CharField(max_length=200)
 	sub_headline = models.CharField(max_length=200, null=True, blank=True)
-	# thumbnail = 
+	thumbnail = models.URLField(blank=True, null=True, default="https://i.imgur.com/rCtiN2c.png")
 	body = RichTextField(null=True, blank=True)
 	created = models.DateTimeField(auto_now_add=True)
 	active = models.BooleanField(default=False)

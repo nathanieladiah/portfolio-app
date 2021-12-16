@@ -16,7 +16,7 @@
 <div class="main-container">
 	<h1>Posts</h1>
 
-	<form id="searchForm" method="get">
+	<form class="mb-3" id="searchForm" method="get">
 		{{ myFilter.form|crispy }}
 		<input class="btn btn-primary" type="submit" value="search">
 	</form>
@@ -26,7 +26,7 @@
 		{% for post in posts %}
 		<div>
 			<div class="post">
-				<img class="thumbnail" src="{% static 'base/images/karina.png' %}">
+				<img class="thumbnail" src="{{ post.thumbnail }}">
 				<div class="post-preview">
 					<h6 class="post-title">{{ post.headline }}</h6>
 					<p class="post-intro">{{ post.sub_headline }}</p>
