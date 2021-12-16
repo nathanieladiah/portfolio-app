@@ -398,3 +398,9 @@ h6{ font-size: 16px;}
 		justify-content: center;
 	}
 }
+
+/* Form page */
+
+.django-ckeditor-widget {
+	width: 100%;
+}

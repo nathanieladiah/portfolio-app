@@ -61,23 +61,26 @@
 	}
 </style>
 
-<div class="main-container">
-	<a class="btn btn-sm btn-primary mt-3" href="{% url 'posts' %}">&laquo Back to Posts</a>
+<section class="s2">
+
+	<div class="main-container">
+		<a class="btn btn-sm btn-primary mt-3" href="{% url 'posts' %}">&laquo Back to Posts</a>
 
 
-	<img class="featured_image" src="{{ post.thumbnail }}">
+		<img class="featured_image" src="{{ post.thumbnail }}">
 
-	{% for tag in post.tags.all %}
-		<span class="tag">{{ tag }}</span>
-	{% endfor %}
+		{% for tag in post.tags.all %}
+			<span class="tag">{{ tag }}</span>
+		{% endfor %}
 
-	<h1>{{ post.headline }}</h1>
-	<h4>{{ post.sub_headline }}</h4>
-	<br>
+		<h1>{{ post.headline }}</h1>
+		<h4>{{ post.sub_headline }}</h4>
+		<br>
 
-	<p>
-		{{ post.body|safe }}
-	</p>
-</div>
+		<p>
+			{{ post.body|safe }}
+		</p>
+	</div>
+</section>	
 
 {% endblock content %}

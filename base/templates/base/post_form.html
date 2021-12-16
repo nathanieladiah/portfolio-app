@@ -12,17 +12,23 @@
 		padding: 5px;
 		border-radius: 5px;
 	}
+
+	.django-ckeditor-widget {
+	width: 100%;
+	}
 </style>
-<div class="main-container">
-	<h3>Post Form</h3>
+<section class="s2">
+	<div class="main-container">
+		<h3 class="mt-3">Post Form</h3>
 
-	<form action="" method="post">
-		{% csrf_token %}
-		{{ form.media }}
-		{{ form|crispy }}
+		<form action="" method="post">
+			{% csrf_token %}
+			{{ form.media }}
+			{{ form|crispy }}
 
-		<input class="mt-3 btn btn-primary" type="submit" value="Submit Post">
+			<input class="my-3 btn btn-primary" type="submit" value="Submit Post">
 
-	</form>
-</div>
+		</form>
+	</div>
+</section>
 {% endblock content %}
